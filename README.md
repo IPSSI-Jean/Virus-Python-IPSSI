@@ -1,10 +1,13 @@
 # Virus-Python-IPSSI
+<!-- Image centrée -->
 
 <div align="center">
 
 ![CAPTURE](https://zupimages.net/up/22/48/4n0h.png)
 
 </div>
+
+<!-- --------------------------- -->
 
 **Virus-Python-IPSSI** a été réalisé dans le cadre pédagogique de l'IPSSI avec un projet sur 1,5 jours. 
 
