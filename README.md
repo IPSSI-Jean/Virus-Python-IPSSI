@@ -29,13 +29,11 @@ Il est recommandé d'exécuter ce programme dans un environnement virtuel, il es
 
 ### Architecture du projet 
 
-Le projet repose sur 1 fichiers Python, 1 fichier de test et 1 fichier d'image : 
+Le projet repose sur 1 fichiers Python, 1 fichier de test en .py : 
 
 - ```virus.py``` --> Qui contient le code du virus
 
 - ```test.py``` --> Qui est vide, il sera remplis par le code injécté du virus
-
-- ```wallpaper.png``` --> Afin de changer le fond d'écran de l'utilisateur lors de l'exécution du virus.
 
 ### Fonctionnement du projet
 
