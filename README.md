@@ -61,7 +61,7 @@ Pour ce projet, les améliorations suivantes ont été mises en place :
 - [x] Enregistreur de frappes ( Keylogger )
 - [ ] Supression du system32
 
-### Mise en place de l'environement de travail
+# Mise en place de l'environement de travail
 
 Il est conseillé, pour travailler dans de bonnes conditions, d’ouvrir un **répertoire de travail** ( sur le bureau ou autre ) sur Visual Studio Code
 
