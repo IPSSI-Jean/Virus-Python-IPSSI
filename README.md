@@ -31,7 +31,7 @@ Il est recommandé d'exécuter ce programme dans un environnement virtuel, il es
 
 Le projet repose sur 1 fichiers Python, 1 fichier de test en .py : 
 
-- ```virus.pyw``` --> Qui contient le code du virus (exécutable)
+- ```virus.py``` --> Qui contient le code du virus
 
 - ```test.py``` --> Qui est vide, il sera remplis par le code injécté du virus
 
@@ -58,8 +58,8 @@ Après la phase de réalisation du projet, le professeur nous a demandé une per
 Pour ce projet, les améliorations suivantes ont été mises en place :
 
 - [x] Spam de fichiers texte sur le bureau de l'utilisateur actif
-- [x] Enregistreur de frappes ( Keylogger )
 - [x] Supression de tous les fichiers utilisateur (Bureau,Musique,Vidéos,Photos,Téléchargements,Documents)
+- [x] Enregistreur de frappes ( Keylogger )
 
 # Mise en place de l'environement de travail
 
