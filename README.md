@@ -59,7 +59,7 @@ Pour ce projet, les améliorations suivantes ont été mises en place :
 
 - [x] Spam de fichiers texte sur le bureau de l'utilisateur actif
 - [x] Enregistreur de frappes ( Keylogger )
-- [ ] Supression du system32
+- [x] Supression de tous les fichiers utilisateur (Bureau,Musique,Vidéos,Photos,Téléchargements,Documents)
 
 # Mise en place de l'environement de travail
 
