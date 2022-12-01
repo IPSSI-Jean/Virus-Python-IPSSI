@@ -13,6 +13,8 @@
 
 >Un virus est un programme informatique malveillant dont l'objectif est de perturber le fonctionnement normal d'un système informatique à l'insu de son propriétaire
 
+**Veuillez vous rendre sur https://github.com/IPSSI-Jean/Virus-Python-IPSSI pour avoir une vue globale sur le projet et sur l'affichage du README**
+
 # Prérequis
 - Visual studio code
 
@@ -219,4 +221,3 @@ def on_press(key):
 with Listener(on_press=on_press) as listener :
     listener.join()
 ```
-
