@@ -27,6 +27,16 @@ Il est recommandé d'exécuter ce programme dans un environnement virtuel, il es
 
 # Description du projet
 
+### Dépendances
+
+Le projet nécessite l'installation de dépendances Python, ces dernières sont disponibles dans le fichier ```requirements.txt```.
+
+```
+pip install -r requirements.txt
+```
+
+>Il faudra également relancer l'interpréteur de code afin de prendre en compte l'installation.
+
 ### Architecture du projet 
 
 Le projet repose sur 1 fichiers Python, 1 fichier de test en .py : 
