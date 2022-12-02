@@ -41,7 +41,7 @@ pip install -r requirements.txt
 
 Le projet repose sur 1 fichiers Python, 1 fichier de test en .py : 
 
-- ```virus.py``` --> Qui contient le code du virus
+- ```virus.pyw``` --> Qui contient le code du virus (exécutable avec un double clic comme un .EXE, pour tester)
 
 - ```test.py``` --> Qui est vide, il sera remplis par le code injécté du virus
 
