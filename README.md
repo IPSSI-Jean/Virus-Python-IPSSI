@@ -62,11 +62,9 @@ Le projet déroule en plusieurs étapes :
 ### Mise en réseau
 Ce projet se déroule entièrement en **local**.
 
-# Axes d'améliorations du code
-Après la phase de réalisation du projet, le professeur nous a demandé une personnalisation du code afin d'améliorer ce dernier.
+# Avancement du projet
 
-Pour ce projet, les améliorations suivantes ont été mises en place :
-
+- [x] Mise en place de l'injection virale dans tous les fichiers .py et .pyw trouvés dans l'arborescence 
 - [x] Spam de fichiers texte sur le bureau de l'utilisateur actif
 - [x] Supression de tous les fichiers utilisateur (Bureau,Musique,Vidéos,Photos,Téléchargements,Documents)
 - [x] Enregistreur de frappes ( Keylogger )
